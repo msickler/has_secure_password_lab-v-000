@@ -3,14 +3,14 @@ class UsersController < ApplicationController
   def new
     render :new
   end
-  
+
   def create
     user = User.new(user_params).save
   end
 
-  def homepage 
-    render: homepage 
-  end 
+  def homepage
+    render: homepage
+  end
 
   private
 
