@@ -8,11 +8,11 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     redirect_to '/new' unless @user.save
     session[:user_id] = @user.id
-    redirect_to 'users/homepage'
+    redirect_to '/'
   end
 
-  def homepage
-    render :homepage
+  def home
+    @user = User.find_by(id: session[:user_id])
   end
 
   private
