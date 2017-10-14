@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def homepage
-    render: homepage
+    render :homepage
   end
 
   private
